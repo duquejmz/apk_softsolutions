@@ -3,7 +3,8 @@ import 'package:http/http.dart' as http;
 import 'package:apk_softsolutions/models/products.dart';
 
 class ProductApiService {
-  static const String baseUrl = "https://apirest-backend-frontend.onrender.com/api/products";
+  static const String baseUrl =
+      "https://apirest-backend-frontend.onrender.com/api/products";
 
   // Listar todos los productos
   Future<List<Product>> getProduct() async {
@@ -31,9 +32,10 @@ class ProductApiService {
 
     if (response.statusCode == 201) {
       final jsonData = jsonDecode(response.body);
-      return Product.fromJson(jsonData['product']);
+      return Product.fromJson(jsonData);
     } else {
-      throw Exception("Error al crear producto");
+      print('Error response: ${response.body}');
+      throw Exception("Error al crear producto: ${response.statusCode}");
     }
   }
 
@@ -47,7 +49,7 @@ class ProductApiService {
 
     if (response.statusCode == 200) {
       final jsonData = jsonDecode(response.body);
-      return Product.fromJson(jsonData['product']);
+      return Product.fromJson(jsonData);
     } else {
       throw Exception("Error al actualizar producto");
     }

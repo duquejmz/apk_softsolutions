@@ -25,11 +25,9 @@ class DeveloperInfoScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              // Foto del desarrollador (opcional)
               const CircleAvatar(
                 radius: 100,
-                backgroundImage: AssetImage(
-                    'assets/developer.jpg'), // Asegúrate de tener esta imagen
+                backgroundImage: AssetImage('assets/developer.jpg'),
               ),
               const SizedBox(height: 20),
 
@@ -43,19 +41,19 @@ class DeveloperInfoScreen extends StatelessWidget {
               const SizedBox(height: 10),
 
               const Text(
-                'Nombre Completo: Tu Nombre Completo',
+                'Camila Duque Jimenez',
                 style: TextStyle(fontSize: 18),
               ),
               const SizedBox(height: 10),
 
               const Text(
-                'Celular: +57 123 4567890',
+                '+57 123 4567890',
                 style: TextStyle(fontSize: 18),
               ),
               const SizedBox(height: 10),
 
               const Text(
-                'Correo: tucorreo@ejemplo.com',
+                'jimenez@gmail.com',
                 style: TextStyle(fontSize: 18),
               ),
               const SizedBox(height: 20),
