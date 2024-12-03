@@ -40,11 +40,13 @@ class MainMenuScreen extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
-                      'Menú Principal',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
+                    Flexible(
+                      child: Text(
+                        'Menú Principal',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
                       ),
                     ),
                   ],
