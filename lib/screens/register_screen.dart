@@ -211,8 +211,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   padding: const EdgeInsets.symmetric(vertical: 16),
                 ),
                 child: _isLoading 
-                  ? CircularProgressIndicator(color: Colors.white)
-                  : Text('Register'),
+                  ? const CircularProgressIndicator(color: Colors.white)
+                  : const Text('Register'),
               ),
 
               // Login Link
